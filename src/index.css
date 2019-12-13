@@ -1,0 +1,14 @@
+.podcast-checkbox {
+  display: inline-block;
+  position: absolute;
+  width: 22px;
+  height: 21px;
+  cursor: pointer;
+  background-image: url("https://cdn.glitch.com/72548e86-2a07-45d1-9756-a034ea6672b3%2Fincomplete.png?1495684448133");
+}
+
+.podcast-text {
+  margin-left: 2em;
+  width: 22px;
+  height: 21px;
+}
