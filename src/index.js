@@ -8,9 +8,9 @@ $(function() {
       alert("Please fill in a podcast!");
     } else {
       var podcastHtml =
-        "<li><span class='podcast-check'></span><span class='podcast-text'>" +
+        "<li><span class='podcast-check'></span><span contenteditable='true' class='podcast-text'>" +
         podcast +
-        "</span><span class='podcast-edit'></span><span class='podcast-remove'></span></li>";
+        "</span><span class='podcast-remove'></span></li>";
       counter++;
       $(".counter").html(counter);
       $(".podcast-list").prepend(podcastHtml);
@@ -36,10 +36,10 @@ $(function() {
   });
 
   //edit
-  $(".podcast-list").on("click", ".podcast-edit", function(event) {
-    var el = $(event.currentTarget).siblings();
-    el.attr("contenteditable")
-      ? el.removeAttr("contenteditable")
-      : el.attr("contenteditable", true);
-  });
+  // $(".podcast-list").on("click", ".podcast-edit", function(event) {
+  //   var el = $(event.currentTarget).siblings();
+  //   el.attr("contenteditable")
+  //     ? el.removeAttr("contenteditable")
+  //     : el.attr("contenteditable", true);
+  // });
 });
