@@ -1,4 +1,4 @@
-$(function addPodcast() {
+$(function() {
   var counter = 0;
   $(".add-podcast").on("click", function() {
     event.preventDefault();
@@ -16,17 +16,13 @@ $(function addPodcast() {
       $(".podcast-input").val("");
     }
   });
-});
-
-$(function removepodcast() {
   $(".podcast-list").on("click", ".podcast-remove", function(event) {
     $(event.currentTarget)
       .parent()
       .remove();
+    counter--;
+    $(".counter").html(counter);
   });
-});
-
-$(function markComplete() {
   $(".podcast-list").on("click", ".podcast-check", function(event) {
     $(event.currentTarget).toggleClass("complete");
   });
