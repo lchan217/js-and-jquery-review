@@ -157,6 +157,15 @@ header p {
   height: 21px;
 }
 
+.podcast-edit {
+  float: right;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-image: url("http://iconsetc.com/icons-watermarks/simple-gray/bfa/bfa_edit/bfa_edit_simple-gray_512x512.png");
+}
+
 .podcast-remove {
   float: right;
   cursor: pointer;

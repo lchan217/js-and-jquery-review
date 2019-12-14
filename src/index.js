@@ -10,7 +10,7 @@ $(function() {
       var podcastHtml =
         "<li><span class='podcast-check'></span><span class='podcast-text'>" +
         podcast +
-        "</span><span class='podcast-remove'></li>";
+        "</span><span class='podcast-edit'></span><span class='podcast-remove'></span></li>";
       counter++;
       $(".counter").html(counter);
       $(".podcast-list").prepend(podcastHtml);
@@ -33,5 +33,13 @@ $(function() {
     $(event.currentTarget)
       .siblings()
       .toggleClass("strike");
+  });
+
+  //edit
+  $(".podcast-list").on("click", ".podcast-edit", function(event) {
+    var el = $(event.currentTarget).siblings();
+    el.attr("contenteditable")
+      ? el.removeAttr("contenteditable")
+      : el.attr("contenteditable", true);
   });
 });
