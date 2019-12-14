@@ -19,3 +19,9 @@ $(function removeItem() {
       .remove();
   });
 });
+
+$(function markComplete() {
+  $(".podcast-list").on("click", ".podcast-checkbox", function(event) {
+    $(event.currentTarget).toggleClass("complete");
+  });
+});
