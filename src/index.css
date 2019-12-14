@@ -165,3 +165,7 @@ header p {
   background-size: cover;
   background-image: url("https://cdn.glitch.com/72548e86-2a07-45d1-9756-a034ea6672b3%2Fremove.png?1495684443965");
 }
+
+.strike {
+  text-decoration: line-through;
+}
