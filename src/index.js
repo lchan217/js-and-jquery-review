@@ -1,4 +1,5 @@
 $(function addPodcast() {
+  var counter = 0;
   $(".add-podcast").on("click", function() {
     event.preventDefault();
     var podcast = $(".podcast-input").val();
@@ -9,7 +10,8 @@ $(function addPodcast() {
         "<li><span class='podcast-check'></span><span class='podcast-text'>" +
         podcast +
         "</span><span class='podcast-remove'></li>";
-
+      counter++;
+      $(".counter").html(counter);
       $(".podcast-list").prepend(podcastHtml);
       $(".podcast-input").val("");
     }
@@ -29,7 +31,3 @@ $(function markComplete() {
     $(event.currentTarget).toggleClass("complete");
   });
 });
-
-//Additional Challenges
-//If you add an podcast with no text, it adds a blank box. This is a bug! Fix it.
-//Add a counter that tells the user how many podcasts are in your podcast list
