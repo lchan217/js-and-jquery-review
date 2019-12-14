@@ -1,14 +1,18 @@
 $(function addPodcast() {
   $(".add-podcast").on("click", function() {
     event.preventDefault();
-    var podcastpodcast = $(".podcast-input").val();
-    var podcastpodcastHtml =
-      "<li><span class='podcast-check'></span><span class='podcast-text'>" +
-      podcastpodcast +
-      "</span><span class='podcast-remove'></li>";
+    var podcast = $(".podcast-input").val();
+    if (!podcast) {
+      alert("Please fill in a podcast!");
+    } else {
+      var podcastHtml =
+        "<li><span class='podcast-check'></span><span class='podcast-text'>" +
+        podcast +
+        "</span><span class='podcast-remove'></li>";
 
-    $(".podcast-list").prepend(podcastpodcastHtml);
-    $(".podcast-input").val("");
+      $(".podcast-list").prepend(podcastHtml);
+      $(".podcast-input").val("");
+    }
   });
 });
 
