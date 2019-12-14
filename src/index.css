@@ -84,6 +84,7 @@ header p {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 0.6em 1em;
   margin-top: 1em;
+  margin-left: 20em;
   border: 1px solid transparent;
   width: 50%;
   box-shadow: 0 0 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12),
@@ -92,6 +93,7 @@ header p {
 
 .podcast-list {
   width: 50%;
+  margin-left: 20em;
 }
 
 .podcast-input:hover {
@@ -122,9 +124,9 @@ header p {
 .add-podcast {
   width: 250px;
   margin: 0px 0px;
+  margin-left: 38em;
   text-align: center;
   display: inline-block;
-  float: right;
   font-size: 15px;
   background-color: #1e2835;
   border-color: #404853;
