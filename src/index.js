@@ -3,11 +3,19 @@ $(function addPodcast() {
     event.preventDefault();
     var podcastItem = $(".podcast-input").val();
     var podcastItemHtml =
-      "<div><span class='podcast-checkbox'></span><span class='podcast-text'>" +
+      "<li><span class='podcast-checkbox'></span><span class='podcast-text'>" +
       podcastItem +
-      "</span><span class='podcast-remove'></div>";
+      "</span><span class='podcast-remove'></li>";
 
     $(".podcast-list").prepend(podcastItemHtml);
     $(".podcast-input").val("");
+  });
+});
+
+$(function removeItem() {
+  $(".podcast-list").on("click", ".podcast-remove", function(event) {
+    $(event.currentTarget)
+      .parent()
+      .remove();
   });
 });
